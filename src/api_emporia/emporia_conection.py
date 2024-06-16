@@ -1,7 +1,9 @@
-import grpc
-import src.partner_api2_pb2_grpc as api
-from src.partner_api2_pb2 import *
+import grpc, os
+import src.api_emporia.partner_api2_pb2_grpc as api
+from src.api_emporia.partner_api2_pb2 import *
 import pandas as pd
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 import numpy as np
 
 def data_extract(cliente, start_interval, end_interval):
@@ -11,8 +13,8 @@ def data_extract(cliente, start_interval, end_interval):
     channel = grpc.secure_channel(partnerApiEndpoint, creds)
     stub = api.PartnerApiStub(channel)
     request = AuthenticationRequest()
-    request.partner_email = 'enter your email'
-    request.password = 'enter your password'
+    request.partner_email = os.getenv('emporia_email')
+    request.password = os.getenv('emporia_password')
     auth_response = stub.Authenticate(request=request)
     auth_token = auth_response.auth_token
     inventoryRequest = DeviceInventoryRequest()

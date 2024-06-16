@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import src.partner_api2_pb2 as partner__api2__pb2
+import src.api_emporia.partner_api2_pb2 as partner__api2__pb2
 
 
 class PartnerApiStub(object):

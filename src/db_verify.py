@@ -1,6 +1,6 @@
 from datetime import datetime  
 from dateutil.relativedelta import relativedelta  
-from src.emporia_conection import data_extract
+from src.api_emporia.emporia_conection import data_extract
 import pandas as pd
 import time, glob
 

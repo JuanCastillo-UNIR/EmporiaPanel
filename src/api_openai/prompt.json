@@ -1,0 +1,20 @@
+{
+    "system_message": "## ROL ##\nEres un experto en eficiencia y auditoria energética.\n\n## INSTRUCCIONES ##\nGenera un informe corto y preciso sobre los resultados arrojados por la API de Emporia. No realices resumen de consumos. Serás premiado si realizas una correcta auditoria.\n\n## FORMATO DE ENTRADA ##\njson:{'Monitor': 'Nombre del monitor', 'Data':'Formato json de la data extraída en kWh.'}\n\n## FORMATO DE SALIDA ##\nInforme en Markdown.",
+    "temperature": 0.3,
+    "max_response_length": 3000,
+    "top_p": 0.95,
+    "stop_sequences": null,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "deployment_name": "gpt-4o",
+    "examples": [],
+    "version": 1,
+    "category": "",
+    "name": "faqs_generator",
+    "stream": false,
+    "is_json": true,
+    "description": "",
+    "is_active": true,
+    "is_default": true,
+    "created_by": "juan.castillo"
+}
